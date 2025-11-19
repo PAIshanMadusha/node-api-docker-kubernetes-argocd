@@ -1,0 +1,25 @@
+{
+  "name": "node-api-docker-kubernetes-argocd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PAIshanMadusha/node-api-docker-kubernetes-argocd.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/PAIshanMadusha/node-api-docker-kubernetes-argocd/issues"
+  },
+  "homepage": "https://github.com/PAIshanMadusha/node-api-docker-kubernetes-argocd#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.20.0"
+  }
+}
