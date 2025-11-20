@@ -3,8 +3,8 @@ import mongoose from "mongoose";
 const NoteSchema = new mongoose.Schema(
   {
     title: { type: String, required: true },
-    subject: String,
-    content: String,
+    subject: { type: String },
+    content: { type: String },
     userId: { type: mongoose.Schema.ObjectId, ref: "User" },
   },
   { timestamps: true }
