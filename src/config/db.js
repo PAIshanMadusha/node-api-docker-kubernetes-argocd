@@ -4,7 +4,7 @@ import mongoose from "mongoose";
 async function connectDB(retries = 10, delay = 5000) {
   while (retries) {
     try {
-      await mongoose.connect("mongodb://localhost:27017/notes");
+      await mongoose.connect("mongodb://localhost:27017/notebook");
       console.log("MongoDB Connected Successfully!");
       return;
     } catch (error) {
