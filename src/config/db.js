@@ -1,10 +1,13 @@
 import mongoose from "mongoose";
 
+const MONGODB_URI =
+  process.env.MONGODB_URI || "mongodb://localhost:27017/notebook";
+
 // Function to connect to MongoDB with retry logic
 async function connectDB(retries = 10, delay = 5000) {
   while (retries) {
     try {
-      await mongoose.connect("mongodb://localhost:27017/notebook");
+      await mongoose.connect(MONGODB_URI);
       console.log("MongoDB Connected Successfully!");
       return;
     } catch (error) {
