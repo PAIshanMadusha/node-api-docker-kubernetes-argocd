@@ -5,10 +5,10 @@ metadata:
   labels:
     app: mongo
 spec:
-  type: ClusterIP
+  type: ClusterIP # Use ClusterIP for internal communication within the cluster
   selector:
     app: mongo
   ports:
-    - protocol: TCP
+    - protocol: TCP # MongoDB default port
       port: 27017
       targetPort: 27017
