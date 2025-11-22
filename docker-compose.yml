@@ -1,0 +1,23 @@
+services:
+  # MongoDB Service
+  mongo:
+    image: mongodb/mongodb-community-server:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  # Node.js API Service
+  node-api-docker-kubernetes-argocd:
+    build: .
+    container_name: node-api-docker-kubernetes-argocd
+    ports:
+      - "3000:3000"
+    environment:
+      MONGODB_URI: mongodb://mongo:27017/notebook
+    depends_on:
+      - mongo
+
+volumes:
+  mongo_data:
