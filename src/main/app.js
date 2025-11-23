@@ -12,8 +12,12 @@ app.use("/users", userRoutes);
 app.use("/notes", noteRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Node.js Express Application is Running, Ready to Handle Requests!");
   console.log("Received a GET request at /");
+  res.send({
+    message:
+      "Node.js Express Application is Running, Ready to Handle Requests!",
+    pod: process.env.HOSTNAME || "unknown", // Include pod name(kubernetes pod or Docker container) if available
+  });
 });
 
 export default app;
